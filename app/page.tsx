@@ -214,8 +214,11 @@ export default function Home() {
         </h1>
 
         {/* File Input */}
-        <label className="relative w-full block">
+        <label className="relative w-full block cursor-pointer rounded-xl h-12 border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
           <FileText className="absolute left-3 top-1/2 -translate-y-1/2 text-purple-500" size={20} />
+          <span className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400">
+            {fileLien ? fileLien.name : "Chọn tệp .docx"}
+          </span>
           <input
             type="file"
             accept=".docx"
@@ -225,7 +228,8 @@ export default function Home() {
               setFileLien(f);
               setWeek(extractWeek(f.name));
             }}
-            className="pl-10 pr-3 py-3 w-full rounded-xl border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none" />
+            className="opacity-0 absolute inset-0 w-full h-full cursor-pointer"
+          />
         </label>
 
         {/* Week Input */}
