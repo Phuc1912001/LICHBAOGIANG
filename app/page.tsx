@@ -210,7 +210,7 @@ export default function Home() {
 
       <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 space-y-4">
         <h1 className="text-3xl font-extrabold text-center text-purple-700 mb-4">
-          Lịch Báo Giảng
+          LỊCH BÁO GIẢNG
         </h1>
 
         {/* File Input */}
@@ -245,7 +245,7 @@ export default function Home() {
         </label>
 
         <div>
-          Lời nhắn: <span className="text-gray-500">Chúc bạn làm việc hiệu quả 😍!</span>
+          Lời nhắn: <span className="text-gray-500">Chúc Người Yêu làm việc hiệu quả 😍😍😍!</span>
         </div>
 
         {/* Export Button */}
