@@ -214,11 +214,8 @@ export default function Home() {
         </h1>
 
         {/* File Input */}
-        <label className="relative w-full block cursor-pointer h-13 rounded-xl border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
+        <label className="relative w-full block">
           <FileText className="absolute left-3 top-1/2 -translate-y-1/2 text-purple-500" size={20} />
-          <span className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
-            Chọn file .docx
-          </span>
           <input
             type="file"
             accept=".docx"
@@ -228,8 +225,7 @@ export default function Home() {
               setFileLien(f);
               setWeek(extractWeek(f.name));
             }}
-            className="pl-10 pr-3 py-3 w-full rounded-xl border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none opacity-0 absolute inset-0 cursor-pointer"
-          />
+            className="pl-10 pr-3 py-3 w-full rounded-xl border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none" />
         </label>
 
         {/* Week Input */}
@@ -245,7 +241,7 @@ export default function Home() {
         </label>
 
         <div>
-          Lời nhắn: <span className="text-gray-500">Chúc Người Yêu làm việc hiệu quả 😍😍😍!</span>
+          Lời nhắn: <span className="text-gray-500">Chúc Người Yêu làm việc hiệu quả 😍😍😍😍😍😍!</span>
         </div>
 
         {/* Export Button */}
