@@ -252,8 +252,8 @@ export default function Home() {
         <button
           onClick={handleExport}
           disabled={exporting}
-          className={`w-full flex items-center justify-center gap-2 rounded-2xl py-4 font-bold text-white transition-colors
-      ${exporting ? "bg-gray-400 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700"}`}
+          className={`w-full flex items-center cursor-pointer justify-center gap-2 rounded-2xl py-4 font-bold text-white transition-colors
+          ${exporting ? "bg-gray-400 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700"}`}
         >
           {exporting ? "Đang tạo..." : <>
             <Download size={20} /> Xuất LBG
