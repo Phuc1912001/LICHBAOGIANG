@@ -194,7 +194,7 @@ export default function Home() {
         mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       });
 
-      saveAs(out, `LBG_Anh_Tuan${week}.docx`);
+      saveAs(out, `LBG.Anh.tuan${week}.docx`);
       toast.success("Xuất LBG cô Ánh thành công 🎉");
     } catch (e) {
       console.error(e);
