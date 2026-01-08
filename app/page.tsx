@@ -205,18 +205,18 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-white via-purple-100 to-white p-6">
-      <Toaster />
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-100 via-white to-purple-100 p-6">
+      <Toaster position="bottom-right" />
 
-      <div className="w-full max-w-md bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 space-y-4">
-        <h1 className="text-3xl font-extrabold text-center text-purple-700 mb-4">
+      <div className="w-full max-w-md bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-8 space-y-6 border border-purple-200">
+        <h1 className="text-4xl font-extrabold text-center text-purple-600 mb-6 tracking-wide">
           LỊCH BÁO GIẢNG
         </h1>
 
         {/* File Input */}
-        <label className="relative w-full block cursor-pointer rounded-xl h-12 border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none">
-          <FileText className="absolute left-3 top-1/2 -translate-y-1/2 text-purple-500" size={20} />
-          <span className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400">
+        <label className="relative w-full block cursor-pointer rounded-2xl h-14 border border-purple-300 hover:border-purple-400 focus-within:ring-2 focus-within:ring-purple-300 transition-all duration-300">
+          <FileText className="absolute left-4 top-1/2 -translate-y-1/2 text-purple-500" size={22} />
+          <span className="absolute left-12 top-1/2 -translate-y-1/2 text-gray-500 truncate">
             {fileLien ? fileLien.name : "Chọn tệp .docx"}
           </span>
           <input
@@ -234,26 +234,30 @@ export default function Home() {
 
         {/* Week Input */}
         <label className="relative w-full block">
-          <CalendarDays className="absolute left-3 top-1/2 -translate-y-1/2 text-purple-500" size={20} />
+          <CalendarDays className="absolute left-4 top-1/2 -translate-y-1/2 text-purple-500" size={22} />
           <input
             type="number"
             placeholder="Tuần"
             value={week ?? ""}
             onChange={(e) => setWeek(Number(e.target.value))}
-            className="pl-10 pr-3 py-3 w-full rounded-xl border border-purple-300 focus:ring-2 focus:ring-purple-400 focus:outline-none"
+            className="pl-12 pr-4 py-3 w-full rounded-2xl border border-purple-300 focus:ring-2 focus:ring-purple-300 focus:outline-none transition-all duration-300 hover:border-purple-400"
           />
         </label>
 
-        <div>
-          Lời nhắn: <span className="text-gray-500">Chúc Người Yêu làm việc hiệu quả 😍😍😍😍😍😍!</span>
+        {/* Message */}
+        <div className="text-gray-600 text-center text-sm">
+          Lời nhắn: <span className="text-purple-500 font-semibold">Chúc Người Yêu làm việc hiệu quả 😍😍😍!</span>
         </div>
 
         {/* Export Button */}
         <button
           onClick={handleExport}
           disabled={exporting}
-          className={`w-full flex items-center cursor-pointer justify-center gap-2 rounded-2xl py-4 font-bold text-white transition-colors
-          ${exporting ? "bg-gray-400 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700"}`}
+          className={`w-full flex items-center justify-center gap-2 rounded-2xl py-4 font-bold text-white transition-transform duration-300
+        ${exporting
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-linear-to-r from-purple-400 to-purple-600 hover:scale-105 shadow-lg hover:shadow-purple-300/50"
+            }`}
         >
           {exporting ? "Đang tạo..." : <>
             <Download size={20} /> Xuất LBG
